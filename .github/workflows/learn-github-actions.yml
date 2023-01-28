@@ -5,5 +5,10 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - run: cd app && npm install
-      - run: cd app && npm run build && mv dist ../docs
+      - uses: actions/checkout@v3
+      - name: setup environemnt
+        working-directory: ./app
+        run: npm install
+      - name: build app
+        working-directory: ./app
+        run: npm run build && mv dist ../docs
