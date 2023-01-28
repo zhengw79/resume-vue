@@ -2,7 +2,7 @@
 export default {
 	data() {
 		return {
-			profile: "/assets/imgs/profile.jpeg",
+			profile: "./assets/imgs/profile.jpeg",
 			items: ["About", "Experience", "Education", "Skills", "Interests", "Awards"]
 		}
 	},
