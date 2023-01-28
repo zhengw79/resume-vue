@@ -1,0 +1,9 @@
+name: learn-github-actions
+run-name: update ${{ github.actor }} resume site
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - run: cd app && npm install
+      - run: cd app && npm run build && mv dist ../docs
