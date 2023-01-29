@@ -5,4 +5,8 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   base: './',
   plugins: [vue()],
+  build: {
+    chunkSizeWarningLimit: 10*1024,
+    outDir: './docs'
+  }
 })
