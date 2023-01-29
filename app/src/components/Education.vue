@@ -49,7 +49,7 @@ export default {
 				<div class="flex-grow-1">
 					<h3 class="mb-0">{{ univ.name }}</h3>
 					<div class="subheading mb-3">{{ univ.degree }}</div>
-					<div>{{ univ.field }}</div>
+					<div class="field">{{ univ.field }}</div>
 					<div>{{ univ.location }}</div>
 					<p class="memo mt-4">{{ univ.memo }}</p>
 				</div>
@@ -64,5 +64,8 @@ export default {
 <style scoped>
 .memo {
 	font-size: small;
+}
+.field {
+	text-transform: capitalize;
 }
 </style>

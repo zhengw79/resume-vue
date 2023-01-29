@@ -1,18 +1,28 @@
 <script setup>
 import Navigation from './components/Navigation.vue';
-import About from './components/About.vue';
-import Experience from './components/Experience.vue';
-import Education from './components/Education.vue';
 </script>
 
 <template>
   <Navigation />
   <!---------|| Page Content ||------>
   <div class="container-fluid p-0">
-    <About />
-    <hr class="m-0"/>
-    <Experience />
-    <hr class="m-0" />
-    <Education />
+    <router-view v-slot="{ Component }">
+      <Transition>
+        <component :is="Component" />
+      </Transition>
+    </router-view>
   </div>
 </template>
+
+<style>
+/* we will explain what these classes do next! */
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+</style>
