@@ -2,8 +2,12 @@
 export default {
 	data() {
 		return {
-			skills: ["fa-html5", "fa-css3-alt", "fa-js-square", "fa-angular", "fa-react", "fa-node-js", "fa-wordpress", "fa-npm"],
-			workflows: ["Mobile-First, Responsive Design", "Cross Browser Testing & Debugging"]
+			skills: ["fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "fab fa-angular", "fab fa-react", "fab fa-node-js", "fab fa-wordpress", "fa-brands fa-laravel", "fab fa-npm"],
+			workflows: ["Mobile-First, Responsive Design", "Cross Browser Testing & Debugging"],
+			demos: [
+				{ url: "/skills/game", txt: "Phaser Animation in Vue" },
+				{ url: "/skills/jump", txt: "Infinity Jump" }
+			]
 		}
 	}
 }
@@ -14,7 +18,7 @@ export default {
 		<h2 class="mb-5">Skills</h2>
 		<div class="subheading mb-3">Programming Languages & Tools</div>
 		<ul class="list-inline dev-icons">
-			<li class="list-inline-item mx-3" v-for="skill in skills"><i :class="`fab ${skill}`"></i></li>
+			<li class="list-inline-item mx-3" v-for="skill in skills"><i :class="`${skill}`"></i></li>
 		</ul>
 		<div class="subheading mb-3">Workflow</div>
 		<ul class="fa-ul mb-0">
@@ -26,9 +30,9 @@ export default {
 		</ul>
 		<div class="subheading my-3">Demo</div>
 		<ul class="fa-ul mb-0">
-			<li>
+			<li v-for="demo in demos">
 				<span class="fa-li"><i class="fa-solid fa-wand-magic-sparkles"></i></span>&nbsp;
-				<router-link to="/skills/game" class="game_url">Phaser Animation in Vue</router-link>
+				<router-link :to="demo.url" class="game_url">{{ demo.txt }}</router-link>
 			</li>
 		</ul>
 	</div>

@@ -6,6 +6,7 @@ import Main from "./components/Main.vue";
 import Skills from "./components/Skills.vue";
 import MainSkills from "./components/skills/MainSkills.vue";
 import Game from "./components/skills/Game.vue";
+import InfinityJump from "./components/skills/InfinityJump.vue";
 import Publications from "./components/Publications.vue";
 import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from "vue-router";
@@ -19,9 +20,11 @@ const routes = [
 			{ path: "/experience", name: "experience", component: Experience },
 			{ path: "/education", name: "education", component: Education },
 			{
-				path: "/skills", name: "skills", component: Skills, children: [{
-					path: "", component: MainSkills
-				}, { path: "game", name: "game", component: Game }]
+				path: "/skills", name: "skills", component: Skills, children: [
+					{ path: "", component: MainSkills },
+					{ path: "game", name: "game", component: Game },
+					{ path: "jump", name: "jump", component: InfinityJump }
+				]
 			},
 			{
 				path: "/publications", name: "publications", component: Publications

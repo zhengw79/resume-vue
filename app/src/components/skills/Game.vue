@@ -1,13 +1,13 @@
 <script setup>
+import BackButton from './BackButton.vue';
 import { onMounted } from 'vue';
-import Navigation from '../Navigation.vue';
 import Phaser from "phaser";
 
 function preload() {
 	this.load.setBaseURL('./');
-	this.load.image('sky', './assets/imgs/space3.png');
-	this.load.image('logo', './assets/imgs/sprites/phaser3-logo.png');
-	this.load.image('red', './assets/imgs/particles/red.png');
+	this.load.image('sky', './assets/imgs/phaser/space3.png');
+	this.load.image('logo', './assets/imgs/phaser/sprites/phaser3-logo.png');
+	this.load.image('red', './assets/imgs/phaser/particles/red.png');
 }
 
 function create() {
@@ -45,21 +45,13 @@ onMounted(() => {
 			create: create
 		}
 	};
-	const game = new Phaser.Game(config);
+	new Phaser.Game(config);
 });
 </script>
-<script>
-export default {
-	methods: {
-		backToHome() {
-			this.$router.push({ path: "/skills" });
-		}
-	}
-}
-</script>
+
 <template>
 	<div class="container-fluid">
-		<div class="row"><a class="nav-link" @click="backToHome"><i class="fa-solid fa-arrow-left"></i> &nbsp;Back</a></div>
+		<div class="row"><BackButton /></div>
 		<div id="game" class="row">
 			<canvas id="canvas" class="rounded img-fluid" />
 		</div>
