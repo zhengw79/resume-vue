@@ -5,9 +5,9 @@ import Phaser from "phaser";
 
 function preload() {
 	this.load.setBaseURL('./');
-	this.load.image('sky', './assets/skies/space3.png');
-	this.load.image('logo', './assets/sprites/phaser3-logo.png');
-	this.load.image('red', './assets/particles/red.png');
+	this.load.image('sky', './assets/imgs/space3.png');
+	this.load.image('logo', './assets/imgs/sprites/phaser3-logo.png');
+	this.load.image('red', './assets/imgs/particles/red.png');
 }
 
 function create() {
