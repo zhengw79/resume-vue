@@ -6,6 +6,7 @@ import Main from "./components/Main.vue";
 import Skills from "./components/Skills.vue";
 import MainSkills from "./components/skills/MainSkills.vue";
 import Game from "./components/skills/Game.vue";
+import Publications from "./components/Publications.vue";
 import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from "vue-router";
 import './styles.css'
@@ -22,6 +23,9 @@ const routes = [
 					path: "", component: MainSkills
 				}, { path: "game", name: "game", component: Game }]
 			},
+			{
+				path: "/publications", name: "publications", component: Publications
+			}
 		]
 	},
 ];

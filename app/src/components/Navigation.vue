@@ -3,11 +3,10 @@ export default {
 	data() {
 		return {
 			profile: "./assets/imgs/profile.jpeg",
-			items: ["about", "experience", "education", "skills", /*"interests", "awards"*/],
+			items: ["about", "experience", "education", "skills", "publications" /*"interests", */],
 		}
 	},
 	mounted() {
-		console.log(this.$route.hash);
 	}
 }
 </script>
