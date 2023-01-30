@@ -10,3 +10,9 @@ export default {
 <template>
 	<a class="nav-link" @click="backToHome"><i class="fa-solid fa-arrow-left"></i> &nbsp;Back</a>
 </template>
+
+<style scoped>
+a {
+	cursor: pointer;
+}
+</style>

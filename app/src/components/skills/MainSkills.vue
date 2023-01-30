@@ -6,7 +6,8 @@ export default {
 			workflows: ["Mobile-First, Responsive Design", "Cross Browser Testing & Debugging"],
 			demos: [
 				{ url: "/skills/game", txt: "Phaser Animation in Vue" },
-				{ url: "/skills/jump", txt: "Infinity Jump" }
+				{ url: "/skills/jump", txt: "Infinity Jump" },
+				{ url: "/skills/plinko", txt: "Plinko"}
 			]
 		}
 	}

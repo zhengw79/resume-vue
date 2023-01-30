@@ -1,9 +1,8 @@
 <script setup>
 import BackButton from './BackButton.vue';
-import Phaser from "phaser";
-import Game from "./jump.scene/Game.scene.js";
-import GameOver from "./jump.scene/GameOver.scene.js";
+import Phaser from 'phaser';
 import { onMounted, onUnmounted } from 'vue';
+import Game from "./plinko.scene/Game.scene";
 
 let game;
 
@@ -11,47 +10,40 @@ onMounted(() => {
 	const config = {
 		type: Phaser.CANVAS,
 		parent: "game",
-		width: 480,
+		width: 500,
 		height: 640,
 		canvas: document.getElementById("canvas"),
-		scene: [Game, GameOver],
 		render: {
 			antialias: true,
 			antialiasGL: true
 		},
-		// scale: {
-		// 	mode: Phaser.Scale.FIT,
-		// 	autoCenter: Phaser.Scale.CENTER_BOTH,
-		// 	width: '100%',
-		// 	height: '100%'
-		// },
+		scene: [Game],
 		physics: {
-			default: "arcade",
-			arcade: {
+			default: "matter",
+			matter: {
+				debug: false,
 				gravity: {
-					y: 200
-				},
-				debug: false
+					y: 1
+				}
 			}
 		}
-	}
+	};
 
 	game = new Phaser.Game(config);
 });
 
 onUnmounted(() => {
-	if (game) {
-		game.destroy(true, false);
-	}
+	game.destroy(true, false);
 });
 </script>
+
 <template>
 	<div class="container-fluid">
 		<div class="row">
 			<BackButton />
 		</div>
 		<div id="game" class="row container">
-			<canvas id="canvas" width="480" height="640"></canvas>
+			<canvas id="canvas" width="500" height="640"></canvas>
 		</div>
 	</div>
 </template>

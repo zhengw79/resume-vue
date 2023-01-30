@@ -8,6 +8,7 @@ import MainSkills from "./components/skills/MainSkills.vue";
 import Game from "./components/skills/Game.vue";
 import InfinityJump from "./components/skills/InfinityJump.vue";
 import Publications from "./components/Publications.vue";
+import Plinko from "./components/skills/Plinko.vue";
 import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from "vue-router";
 import './styles.css'
@@ -23,7 +24,8 @@ const routes = [
 				path: "/skills", name: "skills", component: Skills, children: [
 					{ path: "", component: MainSkills },
 					{ path: "game", name: "game", component: Game },
-					{ path: "jump", name: "jump", component: InfinityJump }
+					{ path: "jump", name: "jump", component: InfinityJump },
+					{ path: "plinko", name: "plinko", component: Plinko }
 				]
 			},
 			{

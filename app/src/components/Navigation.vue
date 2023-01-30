@@ -3,10 +3,28 @@ export default {
 	data() {
 		return {
 			profile: "./assets/imgs/profile.jpeg",
-			items: ["about", "experience", "education", "skills", "publications" /*"interests", */],
+			items: [
+				{
+					url: "about",
+					label: "about"
+				}, {
+					url: "experience",
+					label: "experiences"
+				},
+				{
+					url: "education",
+					label: 'education'
+				},
+				{
+					url: "skills",
+					label: "skills & demos"
+				},
+				{
+					url: "publications",
+					label: "publications"
+				}
+			],
 		}
-	},
-	mounted() {
 	}
 }
 </script>
@@ -26,7 +44,7 @@ export default {
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav">
 				<li class="nav-item" v-for="item in items">
-					<router-link class="nav-link" :to="`/${item}`">{{ item }}</router-link>
+					<router-link class="nav-link" :to="`/${item.url}`">{{ item.label }}</router-link>
 				</li>
 			</ul>
 		</div>
