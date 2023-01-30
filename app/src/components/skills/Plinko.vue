@@ -3,6 +3,8 @@ import BackButton from './BackButton.vue';
 import Phaser from 'phaser';
 import { onMounted, onUnmounted } from 'vue';
 import Game from "./plinko.scene/Game.scene";
+import GameStart from './plinko.scene/Game.Start.scene';
+import GameOver from './plinko.scene/Game.Over.scene';
 
 let game;
 
@@ -17,13 +19,13 @@ onMounted(() => {
 			antialias: true,
 			antialiasGL: true
 		},
-		scene: [Game],
+		scene: [GameStart, Game, GameOver],
 		physics: {
 			default: "matter",
 			matter: {
 				debug: false,
 				gravity: {
-					y: 1
+					y: 0.7
 				}
 			}
 		}
@@ -42,14 +44,18 @@ onUnmounted(() => {
 		<div class="row">
 			<BackButton />
 		</div>
-		<div id="game" class="row container">
-			<canvas id="canvas" width="500" height="640"></canvas>
+		<div class="row">
+			<div id="game" class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7"><canvas id="canvas" class="rounded shadow"
+					width="500" height="640"></canvas></div>
+			<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 text-primary">
+				<p>Features</p>
+				<ul>
+					<li>Phaser Game Engine</li>
+					<li>MatterJS - Comprehensive physics engine.</li>
+					<li>PhysicsEditor - Physics edtor for 2D collision shapes</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </template>
 
-<style scoped>
-#canvas {
-	max-width: 480px;
-}
-</style>

@@ -50,14 +50,20 @@ onUnmounted(() => {
 		<div class="row">
 			<BackButton />
 		</div>
-		<div id="game" class="row container">
-			<canvas id="canvas" width="480" height="640"></canvas>
+		<div class="row">
+			<div id="game" class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
+				<canvas id="canvas" width="480" height="640"></canvas>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 text-primary">
+				<p>Features</p>
+				<ul>
+					<li>Web Game in desktop browser</li>
+					<li>Phaser Game Engine</li>
+					<li>Arcade Physics - 2D JS Physics Engine</li>
+					<li>Use arrow key (<i class="fa-solid fa-arrows-to-dot"></i>) to control "bunny"</li>
+				</ul>
+			</div>
 		</div>
+
 	</div>
 </template>
-
-<style scoped>
-#canvas {
-	max-width: 480px;
-}
-</style>
