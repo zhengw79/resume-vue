@@ -45,6 +45,7 @@ onUnmounted(() => {
 	}
 });
 </script>
+
 <template>
 	<div class="container-fluid">
 		<div class="row">
@@ -52,7 +53,7 @@ onUnmounted(() => {
 		</div>
 		<div class="row">
 			<div id="game" class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
-				<canvas id="canvas" width="480" height="640"></canvas>
+				<canvas id="canvas" width="480" height="640" class="rounded shadow"></canvas>
 			</div>
 			<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 text-primary">
 				<p>Features</p>
