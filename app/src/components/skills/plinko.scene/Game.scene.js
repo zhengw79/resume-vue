@@ -134,7 +134,9 @@ export default class Game extends Phaser.Scene {
 		setTimeout(() => {
 			this.add.image(this.scale.width / 2, this.scale.height / 2, "rollingball", "block_large.png").setAngle(90).setScale(2.5);
 
-			const msg = this.add.text(this.scale.width / 4 + 40, this.scale.height / 2 - 25, `Congratulations!\nYou win ${prize}`, { align: "center" });
+			const msg = this.add.text(this.scale.width / 4 + 40, this.scale.height / 2 - 25, `Congratulations!\nYou win ${prize}`, { align: "center" }).setInteractive().on("pointerdown", () => {
+				this.scene.restart();
+			});
 
 			this.add.text(msg.x + 40, msg.y + 50, "Re-play", { align: "center" }).setInteractive({ cursor: "pointer" }).on("pointerdown", () => {
 				this.scene.restart();

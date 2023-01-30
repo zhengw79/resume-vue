@@ -4,7 +4,6 @@ import Phaser from 'phaser';
 import { onMounted, onUnmounted } from 'vue';
 import Game from "./plinko.scene/Game.scene";
 import GameStart from './plinko.scene/Game.Start.scene';
-import GameOver from './plinko.scene/Game.Over.scene';
 
 let game;
 
@@ -19,7 +18,7 @@ onMounted(() => {
 			antialias: true,
 			antialiasGL: true
 		},
-		scene: [GameStart, Game, GameOver],
+		scene: [GameStart, Game],
 		physics: {
 			default: "matter",
 			matter: {
