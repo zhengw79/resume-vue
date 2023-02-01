@@ -25,14 +25,14 @@ export default {
 					time: "Mar 2021 - Nov 2021"
 				},
 				{
-					title: "software developer",
+					title: "senior software developer",
 					company: "wily global - burlington, ontario, canada",
 					description: "Constructed responsive campaign-oriented web applications using Bootstrap, ReactJS and Laravel. Built web-based real-time video processing app and online game. Developed hybrid apps using Apache Cordova on both iOS and android platforms. ",
 					time: "Jan 2017 - Mar 2021",
 					techstacks: "Laravel / ReactJS / Adobe AnimateCC / Apache Codorva / MySQL"
 				},
 				{
-					title: "software developer",
+					title: "junior software developer",
 					company: "tate group - burlington, ontario, canada",
 					description: "Constructed monolithic web architecture using the Laravel framework. Analyzed business data reports and exploited data warehouse utilizing MySql.",
 					time: "Sep 2015 - Jan 2017",
