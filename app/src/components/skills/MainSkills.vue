@@ -7,7 +7,8 @@ export default {
 			demos: [
 				{ url: "/skills/game", txt: "Phaser Animation in Vue" },
 				{ url: "/skills/jump", txt: "Infinity Jump" },
-				{ url: "/skills/plinko", txt: "Plinko"}
+				{ url: "/skills/plinko", txt: "Plinko"},
+				{ url: "/skills/matching", txt: "Matching"}
 			]
 		}
 	}

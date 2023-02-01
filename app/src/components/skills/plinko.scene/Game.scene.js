@@ -39,7 +39,7 @@ export default class Game extends Phaser.Scene {
 
 		// add left triangle
 		for (let i = 0; i < 5; i++) {
-			this.matter.add.sprite(16, 40 + 120 * i, "rollingball", "block_corner.png", { isStatic: true }).setAngle(-135).setScale(0.8);
+			this.matter.add.image(16, 40 + 120 * i, "rollingball", "block_corner.png", { isStatic: true }).setAngle(-135).setScale(0.8);
 		}
 
 		// add right border
@@ -49,25 +49,25 @@ export default class Game extends Phaser.Scene {
 
 		// add right triangle
 		for (let i = 0; i < 5; i++) {
-			this.matter.add.sprite(485, 40 + 120 * i, "rollingball", "block_corner.png", { isStatic: true }).setAngle(45).setScale(0.8);
+			this.matter.add.image(485, 40 + 120 * i, "rollingball", "block_corner.png", { isStatic: true }).setAngle(45).setScale(0.8);
 		}
 
 		// add pin
 		for (let j = 0; j < 5; j++) {
 			for (let i = 0; i < 5; i++) {
-				this.matter.add.sprite(95 + i * 72, 40 + j * 120, "rollingball", "particle_3.png", { shape: shapes.particle_3 }).setScale(0.4);
+				this.matter.add.image(95 + i * 72, 40 + j * 120, "rollingball", "particle_3.png", { shape: shapes.particle_3 }).setScale(0.4);
 			}
 		}
 
 		for (let j = 0; j < 4; j++) {
 			for (let i = 0; i < 6; i++) {
-				this.matter.add.sprite(75 + i * 70, 100 + j * 120, "rollingball", "particle_3.png", { isStatic: true, shape: shapes.particle_3 }).setScale(0.4);
+				this.matter.add.image(75 + i * 70, 100 + j * 120, "rollingball", "particle_3.png", { isStatic: true, shape: shapes.particle_3 }).setScale(0.4);
 			}
 		}
 
 		// add bottom splitter
 		for (let i = 0; i < 5; i++) {
-			this.matter.add.sprite(90 + i * 80, 630, 'rollingball', 'laser.png', { shape: shapes.laser });
+			this.matter.add.image(90 + i * 80, 630, 'rollingball', 'laser.png', { shape: shapes.laser });
 		}
 
 		// add bottom
@@ -76,10 +76,10 @@ export default class Game extends Phaser.Scene {
 		}
 
 		// add left corner
-		this.matter.add.sprite(25, 613, 'rollingball', 'block_corner.png', { shape: shapes.block_corner });
+		this.matter.add.image(25, 613, 'rollingball', 'block_corner.png', { shape: shapes.block_corner });
 
 		// add right corner
-		this.matter.add.sprite(475, 613, 'rollingball', 'block_corner.png', { shape: shapes["block_corner (2)"] }).setFlipX(true);
+		this.matter.add.image(475, 613, 'rollingball', 'block_corner.png', { shape: shapes["block_corner (2)"] }).setFlipX(true);
 
 		this.ball = this.matter
 			.add
@@ -94,32 +94,32 @@ export default class Game extends Phaser.Scene {
 		this.ball.setFrictionAir(0);
 
 		// add bottom bins
-		const bin1 = this.matter.add.sprite(55, 590, "rollingball", "number_1.png").setOnCollideWith(this.ball, () => {
+		const bin1 = this.matter.add.image(55, 590, "rollingball", "number_1.png").setOnCollideWith(this.ball, () => {
 			this.result = "prize 1";
 			this.matter.world.remove(bin1);
 			this.goToGameOver("prize 1");
 		});
-		const bin2 = this.matter.add.sprite(130, 590, "rollingball", "number_2.png",).setOnCollideWith(this.ball, () => {
+		const bin2 = this.matter.add.image(130, 590, "rollingball", "number_2.png",).setOnCollideWith(this.ball, () => {
 			this.result = "prize 2";
 			this.matter.world.remove(bin2);
 			this.goToGameOver("prize 2");
 		});
-		const bin3 = this.matter.add.sprite(210, 590, "rollingball", "number_3.png").setOnCollideWith(this.ball, () => {
+		const bin3 = this.matter.add.image(210, 590, "rollingball", "number_3.png").setOnCollideWith(this.ball, () => {
 			this.result = "prize 3";
 			this.matter.world.remove(bin3);
 			this.goToGameOver("prize 3");
 		});
-		const bin4 = this.matter.add.sprite(290, 590, "rollingball", "number_4.png").setOnCollideWith(this.ball, () => {
+		const bin4 = this.matter.add.image(290, 590, "rollingball", "number_4.png").setOnCollideWith(this.ball, () => {
 			this.result = "prize 4";
 			this.matter.world.remove(bin4);
 			this.goToGameOver("prize 4");
 		});
-		const bin5 = this.matter.add.sprite(370, 590, "rollingball", "number_5.png").setOnCollideWith(this.ball, () => {
+		const bin5 = this.matter.add.image(370, 590, "rollingball", "number_5.png").setOnCollideWith(this.ball, () => {
 			this.result = "prize 5";
 			this.matter.world.remove(bin5);
 			this.goToGameOver("prize 5");
 		});
-		const bin6 = this.matter.add.sprite(445, 590, "rollingball", "number_6.png").setOnCollideWith(this.ball, () => {
+		const bin6 = this.matter.add.image(445, 590, "rollingball", "number_6.png").setOnCollideWith(this.ball, () => {
 			this.result = "prize 6";
 			this.matter.world.remove(bin6);
 			this.goToGameOver("prize 6");

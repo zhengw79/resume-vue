@@ -52,6 +52,7 @@ onUnmounted(() => {
 					<li>Phaser Game Engine</li>
 					<li>MatterJS - Comprehensive physics engine.</li>
 					<li>PhysicsEditor - Physics edtor for 2D collision shapes</li>
+					<li>If the ball stopped by a pin, please refresh the page to restart.</li>
 				</ul>
 			</div>
 		</div>
