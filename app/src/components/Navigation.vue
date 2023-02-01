@@ -1,17 +1,3 @@
-<script setup>
-import { onMounted } from 'vue';
-
-onMounted(() => {
-	const navLinks = document.querySelectorAll('.nav-item');
-	const menuToggle = document.getElementById('navbarResponsive');
-	const bsCollapse = new bootstrap.Collapse(menuToggle);
-	navLinks.forEach((l) => {
-		l.addEventListener('click', () => {
-			bsCollapse.toggle();
-		})
-	})
-});
-</script>
 <script>
 export default {
 	data() {
@@ -39,6 +25,11 @@ export default {
 				}
 			],
 		}
+	},
+	methods: {
+		clickNavLink(url) {
+			this.$router.replace(url);
+		}
 	}
 }
 </script>
@@ -58,7 +49,7 @@ export default {
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav">
 				<li class="nav-item" v-for="item in items">
-					<router-link class="nav-link" :to="`/${item.url}`">{{ item.label }}</router-link>
+					<a class="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" href="" @click='clickNavLink(item.url)'>{{ item.label }}</a>
 				</li>
 			</ul>
 		</div>
