@@ -8,7 +8,7 @@ export default {
 }
 </script>
 <template>
-	<div class="row col-2 m-2">
+	<div class="row col-6 col-md-6 col-sm-6 col-lg-2 col-xl-2 m-2">
 		<button type="button" class="btn btn-warning mb-1" @click="backToHome">
 			<i class="fa-solid fa-arrow-left"></i> &nbsp;Back
 		</button>
