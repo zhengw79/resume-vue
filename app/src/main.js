@@ -25,7 +25,7 @@ const routes = [
 			{ path: "/education", name: "education", component: Education },
 			{
 				path: "/skills", name: "skills", component: Skills, children: [
-					{ path: "", component: MainSkills },
+					{ path: "", name: "skills", component: MainSkills },
 					{ path: "game", name: "game", component: PhaserLogo },
 					{ path: "jump", name: "jump", component: InfinityJump },
 					{ path: "plinko", name: "plinko", component: Plinko },

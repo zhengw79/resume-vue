@@ -2,7 +2,7 @@
 export default {
 	methods: {
 		backToHome() {
-			this.$router.push({ path: "/skills" });
+			this.$router.replace({ path: "/skills" });
 		}
 	}
 }

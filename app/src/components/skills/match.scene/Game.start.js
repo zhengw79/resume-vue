@@ -14,7 +14,23 @@ export default class GameStart extends Phaser.Scene {
 		this.load.image("narwhal", "assets/imgs/matching/narwhal.png");
 		this.load.image("whale", "assets/imgs/matching/whale.png");
 		this.load.image("dirt", "assets/imgs/matching/dirt.png");
-		this.load.image("button","assets/imgs/matching/button_yellow.png");
+		this.load.image("button", "assets/imgs/matching/button_yellow.png");
+
+		var progressBar = this.add.graphics();
+		var progressBox = this.add.graphics();
+		progressBox.fillStyle(0x222222, 0.8);
+		progressBox.fillRect(256, 512, 320, 50);
+		this.load.on('progress', function (value) {
+			progressBar.clear();
+			progressBar.fillStyle(0xffffff, 1);
+			progressBar.fillRect(256, 512, 300 * value, 30);
+		});
+
+		this.load.on('complete', function () {
+			console.log('complete');
+			progressBar.destroy();
+			progressBox.destroy();
+		});
 	}
 
 	create() {
@@ -34,10 +50,10 @@ export default class GameStart extends Phaser.Scene {
 			this.scale.height / 2 + 200,
 			"button"
 		).setScale(2.2)
-		.setInteractive({ cursor: "pointer"})
-		.on("pointerdown", () => {
-			this.scene.start("game");
-		});
+			.setInteractive({ cursor: "pointer" })
+			.on("pointerdown", () => {
+				this.scene.start("game");
+			});
 
 		this.add.text(
 			this.scale.width / 2 - 120,
@@ -47,7 +63,7 @@ export default class GameStart extends Phaser.Scene {
 				fontSize: 60,
 				color: "black"
 			}
-		).setInteractive({ cursor: "pointer"}).on("pointerdown", () => {
+		).setInteractive({ cursor: "pointer" }).on("pointerdown", () => {
 			this.scene.start("game");
 		});
 	}

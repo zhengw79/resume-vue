@@ -28,7 +28,8 @@ export default {
 	},
 	methods: {
 		clickNavLink(url) {
-			this.$router.replace(url);
+			console.log(url);
+			this.$router.replace(`/${url}`);
 		}
 	}
 }
