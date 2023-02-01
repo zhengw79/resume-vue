@@ -31,13 +31,15 @@ onUnmounted(() => {
 
 <template>
 	<div class="container-fluid">
+		<BackButton />
 		<div class="row">
-			<BackButton />
-		</div>
-		<div class="row">
-			<div id="game" class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7"><canvas id="canvas" class="rounded shadow" width="1024" height="1024"></canvas></div>
+			<div id="game" class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
+				<canvas id="canvas" class="rounded shadow" width="1024" height="1024"></canvas>
+			</div>
 			<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 text-primary">
-
+				<ul>
+					<li>Phaser Game Engine - Multiple Scenes Game</li>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -45,6 +47,7 @@ onUnmounted(() => {
 
 <style scoped>
 #game {
-	font-family:"Digital-7 Mono"
+	font-family: "digital7";
+	font-style: italic;
 }
 </style>

@@ -48,9 +48,7 @@ onUnmounted(() => {
 
 <template>
 	<div class="container-fluid">
-		<div class="row">
-			<BackButton />
-		</div>
+		<BackButton />
 		<div class="row">
 			<div id="game" class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
 				<canvas id="canvas" width="480" height="640" class="rounded shadow"></canvas>

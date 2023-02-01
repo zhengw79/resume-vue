@@ -49,7 +49,7 @@ export default class Game extends Phaser.Scene {
 		}
 
 		// add timer
-		this.timer = this.add.text(this.scale.width / 3, this.scale.height / 15, `00:${this.initialTime}`, { fontSize: 150, fontFamily: "Digital-7 Mono", color: "black" });
+		this.timer = this.add.text(this.scale.width / 3, this.scale.height / 15, `00:${this.initialTime}`, { fontSize: 150, fontFamily: "digital7", fontStyle: "italic", color: "black" });
 
 		this.time.addEvent({
 			delay: 1000,
@@ -59,11 +59,6 @@ export default class Game extends Phaser.Scene {
 
 				if (this.initialTime <= 0 || this.matched === 6) {
 					this.time.removeAllEvents();
-					// this.scene.pause();
-					// this.matched = 0;
-					// this.initialTime = 30;
-					// this.flipped_cards = [];
-
 					this.scene.start("game-over", { result: this.matched });
 				}
 			},
