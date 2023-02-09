@@ -5,6 +5,8 @@ export default {
 			universities: [
 				{
 					name: "ontario tech university",
+					logo: "./assets/imgs/ontario-tech-u.png",
+					url: "https://ontariotechu.ca/",
 					degree: "Master of Science (M.Sc.)",
 					location: "Oshawa, Ontario, Canada",
 					field: "Computer Science - Machine Learning, Computer Vision",
@@ -13,6 +15,8 @@ export default {
 				},
 				{
 					name: "the hong kong polytechnic university",
+					logo: "./assets/imgs/poly-u.jpeg",
+					url: "https://www.polyu.edu.hk/",
 					degree: "master of science (M.Sc.)",
 					location: "Hong Kong, China",
 					field: "computer software engineering",
@@ -21,6 +25,7 @@ export default {
 				},
 				{
 					name: "university of chinese academy of sciences",
+					url: "https://english.ucas.ac.cn/",
 					degree: "master of engineering (M.Eng.)",
 					location: "Beijing, China",
 					field: "computer science",
@@ -28,7 +33,8 @@ export default {
 					time: "Sep 2004 - Sep 2007"
 				},
 				{
-					name: "beijing union univerity",
+					name: "beijing union university",
+					url: "https://www.buu.edu.cn/indexe/indexe.htm",
 					degree: "bachelor of technology (B.Tech.)",
 					location: "Beijing, China",
 					field: "electronics and information technology",
@@ -47,7 +53,7 @@ export default {
 			<h2 class="mb-5">Education</h2>
 			<div class="d-flex flex-column flex-md-row justify-content-between mb-5" v-for="univ in universities">
 				<div class="flex-grow-1">
-					<h3 class="mb-0">{{ univ.name }}</h3>
+					<h3 class="mb-0">{{ univ.name }}&nbsp;&nbsp;<a :href="univ.url" target="_blank" class="univ-link"><i class="fa-solid fa-building-columns"></i></a></h3>
 					<div class="subheading mb-3">{{ univ.degree }}</div>
 					<div class="field">{{ univ.field }}</div>
 					<div>{{ univ.location }}</div>
@@ -65,7 +71,12 @@ export default {
 .memo {
 	font-size: small;
 }
+
 .field {
 	text-transform: capitalize;
+}
+
+.univ-link {
+	/* font-size: 18px; */
 }
 </style>
