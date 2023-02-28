@@ -15,6 +15,7 @@ const Matching = () => import("./components/skills/Matching.vue");
 const Plinko = () => import("./components/skills/Plinko.vue");
 const InfinityJump = () => import("./components/skills/InfinityJump.vue");
 const PhaserLogo = () => import("./components/skills/PhaserLogo.vue");
+const PhotoFrame = () => import("./components/skills/PhotoFrame.vue");
 
 const routes = [
 	{
@@ -29,7 +30,8 @@ const routes = [
 					{ path: "game", name: "game", component: PhaserLogo },
 					{ path: "jump", name: "jump", component: InfinityJump },
 					{ path: "plinko", name: "plinko", component: Plinko },
-					{ path: "matching", name: "match", component: Matching}
+					{ path: "matching", name: "match", component: Matching},
+					{ path: "photo-frame", name: "photo", component: PhotoFrame}
 				]
 			},
 			{

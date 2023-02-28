@@ -45,12 +45,16 @@ onUnmounted(() => {
 			<div id="game" class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7"><canvas id="canvas" class="rounded shadow"
 					width="500" height="640"></canvas></div>
 			<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 text-primary">
-				<p>Features</p>
+				<h4>How to play?</h4>
+				<ul>
+					<li>Click "Start" button to play.</li>
+					<li>If the ball stopped by a pin, please refresh the page to restart.</li>
+				</ul>
+				<h4>Features</h4>
 				<ul>
 					<li>Phaser Game Engine</li>
 					<li>MatterJS - Comprehensive physics engine.</li>
 					<li>PhysicsEditor - Physics edtor for 2D collision shapes</li>
-					<li>If the ball stopped by a pin, please refresh the page to restart.</li>
 				</ul>
 			</div>
 		</div>

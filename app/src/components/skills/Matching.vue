@@ -37,6 +37,12 @@ onUnmounted(() => {
 				<canvas id="canvas" class="rounded shadow" width="1024" height="1024"></canvas>
 			</div>
 			<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 text-primary">
+				<h4>How to play?</h4>
+				<ul>
+					<li>Click "Start" button to play.</li>
+					<li>Find all image pairs in 30 seconds.</li>
+				</ul>
+				<h4>Features</h4>
 				<ul>
 					<li>Phaser Game Engine - Multiple Scenes Game</li>
 				</ul>

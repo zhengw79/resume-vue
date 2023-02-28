@@ -54,7 +54,7 @@ onUnmounted(() => {
 				<canvas id="canvas" width="480" height="640" class="rounded shadow"></canvas>
 			</div>
 			<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 text-primary">
-				<p>Features</p>
+				<h4>Features</h4>
 				<ul>
 					<li>Web Game in desktop browser</li>
 					<li>Phaser Game Engine</li>

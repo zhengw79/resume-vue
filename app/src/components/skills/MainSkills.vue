@@ -9,6 +9,9 @@ export default {
 				{ url: "/skills/jump", txt: "Infinity Jump" },
 				{ url: "/skills/plinko", txt: "Plinko"},
 				{ url: "/skills/matching", txt: "Matching"}
+			],
+			images: [
+				{ url: "/skills/photo-frame", txt: "Photo Frame" }
 			]
 		}
 	}
@@ -30,11 +33,18 @@ export default {
 				{{ wf }}
 			</li>
 		</ul>
-		<div class="subheading my-3">Demo</div>
+		<div class="subheading my-3">Game Demo</div>
 		<ul class="fa-ul mb-0">
 			<li v-for="demo in demos">
 				<span class="fa-li"><i class="fa-solid fa-wand-magic-sparkles"></i></span>&nbsp;
 				<router-link :to="demo.url" class="game_url">{{ demo.txt }}</router-link>
+			</li>
+		</ul>
+		<div class="subheading my-3">Real-time image & video processing</div>
+		<ul class="fa-ul mb-0">
+			<li v-for="img in images">
+				<span class="fa-li"><i class="fa-solid fa-wand-magic-sparkles"></i></span>&nbsp;
+				<router-link :to="img.url" class="game_url">{{ img.txt }}</router-link>
 			</li>
 		</ul>
 	</div>
