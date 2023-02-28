@@ -51,8 +51,8 @@ function initCanvas() {
 
 function initFrames() {
 	let frames = [
-		{ url: "/assets/imgs/photo/frame1.png", ratio: 0.2 },
-		{ url: "/assets/imgs/photo/frame2.png", ratio: 0.3 }
+		{ url: "./assets/imgs/photo/frame1.png", ratio: 0.2 },
+		{ url: "./assets/imgs/photo/frame2.png", ratio: 0.3 }
 	];
 	frames.forEach((frame, idx) => {
 		fabric.Image.fromURL(frame.url, function (fr_img) {
