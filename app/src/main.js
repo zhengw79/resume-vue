@@ -6,6 +6,7 @@ import Main from "./components/Main.vue";
 import Skills from "./components/Skills.vue";
 import MainSkills from "./components/skills/MainSkills.vue";
 import Publications from "./components/Publications.vue";
+import ZBarScanner from "./components/skills/ZBarScanner.vue";
 
 import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from "vue-router";
@@ -31,7 +32,8 @@ const routes = [
 					{ path: "jump", name: "jump", component: InfinityJump },
 					{ path: "plinko", name: "plinko", component: Plinko },
 					{ path: "matching", name: "match", component: Matching},
-					{ path: "photo-frame", name: "photo", component: PhotoFrame}
+					{ path: "photo-frame", name: "photo", component: PhotoFrame},
+					{ path: "zbar-demo", name: "zbar", component: ZBarScanner}
 				]
 			},
 			{

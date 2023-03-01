@@ -11,7 +11,8 @@ export default {
 				{ url: "/skills/matching", txt: "Matching"}
 			],
 			images: [
-				{ url: "/skills/photo-frame", txt: "Photo Frame" }
+				{ url: "/skills/photo-frame", txt: "Photo Frame" },
+				{ url: "/skills/zbar-demo", txt: "ZBar Scanner"}
 			]
 		}
 	}
@@ -40,7 +41,7 @@ export default {
 				<router-link :to="demo.url" class="game_url">{{ demo.txt }}</router-link>
 			</li>
 		</ul>
-		<div class="subheading my-3">Real-time image & video processing</div>
+		<div class="subheading my-3">Real-time image & video processing (Desktop browser)</div>
 		<ul class="fa-ul mb-0">
 			<li v-for="img in images">
 				<span class="fa-li"><i class="fa-solid fa-wand-magic-sparkles"></i></span>&nbsp;
