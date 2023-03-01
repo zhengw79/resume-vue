@@ -34,14 +34,10 @@ export const fetch_imagedata_from_video = (video, canvas, scale) => {
 	canvas.height = size;
 	const context = canvas.getContext("2d");
 	context.drawImage(video, sx, sy, size, size, 0, 0, size, size);
-	try {
-		const frame_imgdata = context.getImageData(0, 0, size, size);
-		frame_imgdata['context'] = context;
-		return frame_imgdata;
-	} catch (e) {
-		return null;
-	}
 
+	const frame_imgdata = context.getImageData(0, 0, size, size);
+	frame_imgdata['context'] = context;
+	return frame_imgdata;
 }
 
 export function getStringFromMemory(memoryOffset, moduleMemory, size = 256) {

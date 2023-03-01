@@ -92,7 +92,7 @@ function tick() {
 		return;
 	}
 
-	const img_data = fetch_imagedata_from_video(webcam, canvas, 0.8);
+	const img_data = fetch_imagedata_from_video(webcam, canvas, 1);
 
 	if (img_data) {
 		const _codes = wasmCls.process(img_data.data);
@@ -168,11 +168,13 @@ onUnmounted(() => {
 		</div>
 
 		<div class="row">
-			{{ codes && codes.map((code, idx) => `${code.type} - ${code.data}`) }}
+			<p class="code">
+				{{ codes && codes.map((code, idx) => `${code.type} - ${code.data}`) }}
+			</p>
 		</div>
 
 		<div class="row">
-			<video muted id="webcam" width="1" height="1"></video>
+			<video autoPlay muted playsInline id="webcam" style="display:none"></video>
 			<canvas id="canvas" class="scanner" />
 		</div>
 
@@ -185,15 +187,20 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-.btn { color: white; }
-.scanner canvas {
+.code {
+	font-weight: bold;
+}
+.btn {
+	color: white;
+}
+
+#canvas.scanner {
 	width: 400px;
-	height: 400px;
-	border: 4px solid #000;
+
 }
 
 @media only screen and (max-width: 768px) {
-	.scanner canvas {
+	#canvas.scanner {
 		max-width: 100%;
 		height: auto;
 	}
@@ -201,5 +208,4 @@ onUnmounted(() => {
 	.demo_img {
 		max-width: 100%;
 	}
-}
-</style>
+}</style>
