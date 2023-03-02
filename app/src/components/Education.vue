@@ -10,7 +10,7 @@ export default {
 					degree: "Master of Science (M.Sc.)",
 					location: "Oshawa, Ontario, Canada",
 					field: "Computer Science - Machine Learning, Computer Vision",
-					memo: "Concentrate on machine learning, specifically computer vision. <br/>Meanwhile, two paper were published at <span>the Tenth Conference on Computer and Robot Vision</span> in 2013.",
+					memo: "Concentrate on machine learning, specifically computer vision. <br/>Meanwhile, two paper were published at <span style='color:#bd5d38;font-weight:bold'>the Tenth Conference on Computer and Robot Vision</span> in 2013.",
 					time: "Sep 2011 - Oct 2013"
 				},
 				{
@@ -78,10 +78,5 @@ export default {
 
 .univ-link {
 	/* font-size: 18px; */
-}
-
-.memo span {
-	font-weight: bold;
-	font-style: italic;
 }
 </style>
