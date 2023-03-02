@@ -2,8 +2,8 @@
 export default {
 	data() {
 		return {
-			skills: ["fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "fab fa-angular", "fab fa-react", "fab fa-node-js", "fab fa-wordpress", "fa-brands fa-laravel", "fab fa-npm"],
-			workflows: ["Mobile-First, Responsive Design", "Cross Browser Testing & Debugging"],
+			skills: ["fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "fab fa-angular", "fab fa-react", "fab fa-node-js", "fa-brands fa-laravel", "fab fa-npm"],
+			workflows: ["Full-stack: Monolithic architecture for traditional web apps", "Full-stack: Affordable distributed system architectures using microservice on cloudy platform", "Frontend: Mobile-first, Responsive Design", "Frontend: Cross Browser Testing & Debugging"],
 			demos: [
 				{ url: "/skills/game", txt: "Phaser Animation in Vue" },
 				{ url: "/skills/jump", txt: "Infinity Jump" },

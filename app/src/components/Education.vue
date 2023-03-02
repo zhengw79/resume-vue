@@ -10,7 +10,7 @@ export default {
 					degree: "Master of Science (M.Sc.)",
 					location: "Oshawa, Ontario, Canada",
 					field: "Computer Science - Machine Learning, Computer Vision",
-					memo: "Concentrate on machine learning, specifically computer vision. Meanwhile, two paper were published at the Tenth Conference on Computer and Robot Vision in 2013.",
+					memo: "Concentrate on machine learning, specifically computer vision. <br/>Meanwhile, two paper were published at <span>the Tenth Conference on Computer and Robot Vision</span> in 2013.",
 					time: "Sep 2011 - Oct 2013"
 				},
 				{
@@ -20,7 +20,7 @@ export default {
 					degree: "master of science (M.Sc.)",
 					location: "Hong Kong, China",
 					field: "computer software engineering",
-					memo: "Graduated with DISTINCTION. Focus on the study of modern web framework. Research area cover algorithm design, software quality, data mining and database.",
+					memo: "Graduated with DISTINCTION. <br/>Focus on the study of modern web framework. <br/>Research area cover algorithm design, software quality, data mining and database.",
 					time: "Sep 2005 - Sep 2007"
 				},
 				{
@@ -29,7 +29,7 @@ export default {
 					degree: "master of engineering (M.Eng.)",
 					location: "Beijing, China",
 					field: "computer science",
-					memo: "Focus on software engineering, courses includes software architecture, software design pattern, software quality etc.",
+					memo: "Focus on software engineering. <br/>Courses includes software architecture, software design pattern, software quality etc.",
 					time: "Sep 2004 - Sep 2007"
 				},
 				{
@@ -38,7 +38,7 @@ export default {
 					degree: "bachelor of technology (B.Tech.)",
 					location: "Beijing, China",
 					field: "electronics and information technology",
-					memo: "Graduate with scholarship. Courses include computer programming (C/C++), algorithm design, digital circuits, and signal processing.",
+					memo: "Graduate with scholarship. <br/>Courses include computer programming (C/C++), algorithm design, digital circuits, and signal processing etc.",
 					time: "Sep 1998 - Sep 2002"
 				}
 			]
@@ -57,7 +57,7 @@ export default {
 					<div class="subheading mb-3">{{ univ.degree }}</div>
 					<div class="field">{{ univ.field }}</div>
 					<div>{{ univ.location }}</div>
-					<p class="memo mt-4">{{ univ.memo }}</p>
+					<p class="memo mt-4" v-html="univ.memo"></p>
 				</div>
 				<div class="flex-shrink-0">
 					<span class="text-primary">{{ univ.time }}</span>
@@ -78,5 +78,10 @@ export default {
 
 .univ-link {
 	/* font-size: 18px; */
+}
+
+.memo span {
+	font-weight: bold;
+	font-style: italic;
 }
 </style>

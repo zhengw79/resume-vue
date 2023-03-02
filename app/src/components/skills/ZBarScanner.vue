@@ -152,8 +152,8 @@ onUnmounted(() => {
 				<h4>How to play?</h4>
 				<ul>
 					<li>Real-time bar-code scanner.</li>
-					<li>Closely scan a barcode in front of webcam.</li>
-					<li>App detect the bar code and render.</li>
+					<li>Closely scan a barcode in front of a webcam.</li>
+					<li>The app detects the bar code and render it automatically.</li>
 					<li>Click <i class="fas fa-camera-alt"></i> to restart.</li>
 				</ul>
 			</div>
