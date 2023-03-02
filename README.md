@@ -1,4 +1,4 @@
-# resume
+# Resume
 Zheng's resume site built on Vuejs
 
 ## Content
